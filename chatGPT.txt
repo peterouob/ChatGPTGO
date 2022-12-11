@@ -1,0 +1,383 @@
+//產生spring 適用struct然後BIND接著傳送
+<|endoftext|>package com.example.demo.controller;
+
+import com.example.demo.model.User;
+import com.example.demo.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/user")
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/all")
+    public List<User> getAllUsers(){
+        return userService.getAllUsers();
+    }
+
+    @PostMapping("/add")
+    public void addUser(@RequestBody User user){
+        userService.addUser(user);
+    }
+
+    @PutMapping("/update")
+    public void updateUser(@RequestBody User user){
+        userService.updateUser(user);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteUser(@PathVariable int id){
+        userService.deleteUser(id);
+    }
+
+}<|endoftext|>package com.example.demo.controller;
+
+import com.example.demo.model.User;
+import com.example.demo.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/user")
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/all")
+    public List<User> getAllUsers(){
+        return userService.getAllUsers();
+    }
+
+    @PostMapping("/add")
+    public void addUser(@RequestBody User user){
+        userService.addUser(user);
+    }
+
+    @PutMapping("/update")
+    public void updateUser(@RequestBody User user){
+        userService.updateUser(user);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteUser(@PathVariable int id){
+        userService.deleteUser(id);
+    }
+
+}hello world
+
+Hello world! It's nice to meet you.<|endoftext|>package com.example.demo.controller;
+
+import com.example.demo.model.User;
+import com.example.demo.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/user")
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/all")
+    public List<User> getAllUsers(){
+        return userService.getAllUsers();
+    }
+
+    @PostMapping("/add")
+    public void addUser(@RequestBody User user){
+        userService.addUser(user);
+    }
+
+    @PutMapping("/update")
+    public void updateUser(@RequestBody User user){
+        userService.updateUser(user);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteUser(@PathVariable int id){
+        userService.deleteUser(id);
+    }
+
+}hello world
+
+Hello world! It's nice to meet you.介紹一下什麼是javascript
+
+JavaScript 是一種基於原型、函數先行的腳本語言，是一種直譯式的語言，它可以向瀏覽器提供動態的網頁效果。它是一種客戶端的腳本語言，主要用於網頁的客戶端腳本程式設計，它可以使網頁具有互動性和動態效果。它可以用於開發應用程式，也可以用於開發網站。它可以用於構建桌面應用程式，也可以用於構建移動應用程式。什麼是golang
+
+Golang（又稱為Go）是一種開放源碼的編程語言，由Google開發，用於構建可靠，高效，可擴展的軟件。它是一種靜態類型的，編譯型的，平臺無關的語言，可以用於構建Web服務，桌面應用程序，移動應用程序和系統程序。它的主要特點包括：簡單易學，高效，可擴展性，安全性，可移植性，可靠性和可測試性。繼續
+
+The second step is to create a plan. This plan should include the goals you want to achieve, the timeline for achieving them, and the resources you will need to accomplish them. It should also include any potential risks or challenges you may face along the way. Once you have created your plan, you should review it with your team and make any necessary adjustments. Finally, you should set up a system to track your progress and make sure you are on track to reach your goals.
+
+Golang 是一種由Google開發的開放原始碼編程語言，它是一種面向對象、函數式、運行時編譯、静態強制請求型語言，它也擁有容易使用的內存管理系統和極簡的語法，可以用於構建高效能、可複用的軟件系統，並且比C與C++等豐富和更高階語言更易於學習及開發。 ?
+
+Golang 是一種開放原始碼的編程語言，由Google提出和部分開發。它是靜態強類型、線性化、以行動作及函數導向而聞名，並且特別適合於服務端與大規模數字企業。它具備了複雜性強大的功能庫、可視正在使用上創造直易平常關係之工具（即根本狀況述） 並也針對低耗電量之裝置所優先適用。你好，我叫黄毛。
+
+Nice to meet you. I'm Huang Mao.如何使用C++實現棧
+
+// array-based stack
+template <typename T> 
+class Stack 
+{ 
+private: 
+    T *stackArray; // pointer to the array 
+    int maxSize; // max size of the array 
+    int top; // top of the stack 
+
+public: 
+    Stack(int); 
+    void push(T); 
+    T pop(); 
+    int size(); 
+    bool isEmpty(); 
+    bool isFull(); 
+}; 
+
+template <class T>
+Stack<T>::Stack(int size)
+{
+    stackArray = new T[size];
+    maxSize = size;
+    top = -1; // 初始化爲空棧
+}
+
+//push操作 
+template <class T>
+void Stack<T>::push(T item) 
+{
+    // 檢查棧是否已滿 
+    if (isFull()) 
+    { 
+        cout << "The stack is full" << endl; 
+        return;
+    } 
+
+    // 將元素添加到棧頂 
+    top++;
+    stackArray[top] = item;
+} 
+
+// pop操作
+template <class T>
+T Stack<T>::pop()
+{
+    // 檢查棧是否爲空棧
+    if (isEmpty())
+    {
+        cout << "The stack is empty" << endl;
+        return 0;
+    }
+
+    // 返回棧頂元素
+    T data = stackArray[top];
+    top--;
+    return data;
+}
+
+// 取得棧尺寸
+template <class T>
+int Stack<T>::size()
+{
+    return top + 1;
+}
+
+// 判斷是否爲空棧
+template <class T> 
+bool Stack<T>::isEmpty()
+{
+    return top == -1;
+}
+
+// 判斷是否已滿
+template <class T> 
+bool Stack<T>::isFull() 
+{ 
+   return top == maxSize - 1;
+}
+
+繼續登入
+        var data = {
+            accessToken: accessToken
+        }
+        console.log(data);
+        $.ajax({
+            data : data,
+            type : "post",
+            url : "/api/common/checkAccessToken",
+            success : function (response) {
+                if (response.status == "OK"){
+                    $.each(response.result, function (i, item) {
+                        console.log(item);
+   
+                        if (item.isSuccess) {// accessToken有效
+                            $('#clientErrorText').text('');
+                            $('.cnhSalesContainer').hide();
+                            $.mobile.changePage('#homePage', {transition:'slide'});
+                            if ($.cookie('lastPage') != null){
+                                $.mobile.changePage($.cookie('lastPage'), {transition:'slide'});     
+                            }
+                        } else{
+                            $('#clientErrorText').text(item.description);
+                        }
+                     
+                    });
+                }else{
+                    alert(response.message);
+                }      
+            }
+        }); 
+    }
+    
+    getGasoline95Price = function(){
+        var date = new Date();
+        date.setDate(date.getDate()-1);
+        var month = date.getMonth()+1 ;
+        var day = date.getDate().toString().length==1 ? '0'+date.getDate().toString() : date.getDate(); 
+        var yestoday= date.getFullYear().toString() + '-' + month.toString() + '-' +day.toString();
+        
+        $.ajax({
+            type : "get",
+            url : "/api/t101s/gasoline95/"+yestoday,
+            success : function (response) {
+                if (response.status == "OK") {
+                    var layoutContent ='';
+                    $.each(response.result, function (i, item) {
+                        layoutContent += '<tr>'
+                                            +'<td>' + item.rowContent.col1 + '%</td>'
+                                            +'<td>' + item.rowContent.col2 + '</td>'
+                                        +'</tr>';
+                                
+
+                    });
+                    
+                    $('.crudeOilPriceContent tbody').html(layoutContent);
+                    
+                }else{
+                    alert(response.message);
+                }              
+            }
+        }); 
+    };
+   
+    getCrudeOilPrice = function(){
+        var date = new Date();
+        date.setDate(date.getDate()-1);
+        var month = date.getMonth()+1 ;
+        var day = date.getDate().toString().length==1 ? '0'+date.getDate().toString() : date.getDate(); 
+        var yestoday= date.getFullYear().toString() + '-' + month.toString() + '-' +day.toString();
+        
+        $.ajax({
+            type : "get",
+            url : "/api/t101s/crudeOilPrice/"+yestoday,
+            success : function (response) {
+                if (response.status == "OK") {
+                    var layoutContent ='';
+                    $.each(response.result, function (i, item) {
+                        layoutContent += '<tr>'
+                                            +'<td>' + item.rowContent.col1 + '</td>'
+                                            +'<td>' + item.rowContent.col2 + '</td>'
+                                        +'</tr>';
+                                
+
+                    });
+                    
+                    $('.gasoline95PriceContent tbody').html(layoutContent);
+                    
+                }else{
+                    alert(response.message);
+                }              
+            }
+        });         
+    }; 
+
+});你好！
+
+你好！很高兴见到你！使用C++編寫八皇后問題
+
+#include<iostream>
+#include<cstdlib>
+#include<cstdio>
+#include<algorithm>
+#include<vector>
+
+using namespace std;
+
+int n; // 棋盤大小
+bool a[20][20]; // 棋盤
+vector<int> res; // 一個解 
+
+bool check(int row, int col) 
+{ 
+    // 同行 
+    for (int i = 0; i < row; ++i) 
+        if (a[i][col]) 
+            return false;
+  
+    // 左上角 
+    for (int i = row, j = col; i >= 0 && j >= 0; --i, --j) 
+        if (a[i][j]) 
+            return false;
+  
+    // 右上角 
+    for (int i = row, j = col; i >= 0 && j < n; --i, ++j) 
+        if (a[i][j]) 
+            return false;
+  
+    return true; 
+} 
+
+void nQueen(int row) 
+{ 
+    //已處理完
+    if (row == n) 
+    { 
+        for (int i = 0; i < n; ++i) 
+            res.push_back(i);
+        return; 
+    } 
+  
+    for (int i = 0; i < n; ++i) 
+    { 
+        //檢查這個位置是否合法
+        if (check(row, i)) 
+        { 
+            a[row][i] = true; 
+            nQueen(row + 1); 
+            a[row][i] = false; 
+        } 
+    } 
+    return; 
+} 
+
+void printSolution() 
+{ 
+    cout << "皇后的放置位置：(\ 行, 列) \n";
+    for (int m = 0; m < n; ++m) 
+    { 
+        cout << "(" << m << ", " 
+             << res[m] << ") "; 
+    } 
+    cout << endl; 
+    return;
+} 
+  
+int main() 
+{ 
+    cout << "請輸入棋盤的大小： ";
+    cin >> n;
+    memset(a, 0, sizeof a); 
+    nQueen(0); 
+    printSolution(); 
+  
+    return 0; 
+}
